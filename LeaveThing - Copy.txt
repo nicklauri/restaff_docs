@@ -1,0 +1,20 @@
+
+button:[+Add new]
+    GET /leave_type/get-dropdown : get a list of leave types (w/ tagOptions).
+        unpaidDay doesn't reduce remainingDay.
+    GET /annual_leave/get_by_employee : get leave info of current employee
+        year, totalDay, usedDay, remainingDay, unpaidDay, prevYearTransferDay, sellDay,
+
+    => POST /leave_request [BODY: LeaveRequestDto]
+        ValidateRequestDate():
+            check working date and time
+            check overlapse date
+            check conflict with holiday events
+        If LeaveType != ReducedDate => Reason is required.
+        CheckAnnualLeaveDay:
+        
+(approve)
+
+
+add /user/profile to top menu
+
